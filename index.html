@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Humanizer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1A73E8', // Google Blue
+              secondary: '#EA4335', // Google Red
+              accent: '#FBBC04', // Google Yellow
+              success: '#34A853', // Google Green
+              background: '#F8F9FA', // Default, less used now
+              gradientStart: '#FDFBFE', // Very light, almost white with a hint of lavender
+              gradientEnd: '#F4EEFA', // Soft light lavender
+              textPrimary: '#202124',
+              textSecondary: '#5F6368',
+              buttonPrimary: '#BD7FE4', // New custom button color
+              buttonPrimaryHover: '#A461CF', // Slightly darker for hover state
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gradient-to-br from-gradientStart to-gradientEnd text-textPrimary antialiased min-h-screen flex flex-col">
+    <div id="root" class="flex-grow flex flex-col"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
